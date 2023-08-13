@@ -28,7 +28,7 @@ jobs:
         go-version-file: go.mod
     - run: script/build
     - uses: ncipollo/release-action@v1
-      # if: ${{ startsWith(github.ref, 'refs/tags') }}
+      if: ${{ startsWith(github.ref, 'refs/tags') }}
       with:
         artifacts: "pget"
         
